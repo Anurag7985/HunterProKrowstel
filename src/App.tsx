@@ -18,9 +18,10 @@ const App: React.FC = () => {
        h='100%' bg='yellow'>
        {/* Sidebar */}
        </Box>
-      <Box  w={isSideBarOpen ? { lg: "85%" } : '100%'}
+    
+      <Box  w={isSideBarOpen ? { base: '100%' , lg: "85%", md: '100%' } : '100%'}
           transition="width 0.2s" h='100%' bg='purple' border='2px' borderColor='black'>
-           <Box bg="aqua"  w='100%' h="15%">
+           <Box bg="aqua"  w='100%' h="10%" position='relative'>
             <Index/>
 
            </Box>
