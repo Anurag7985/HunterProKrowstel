@@ -45,6 +45,7 @@ const App: React.FC = () => {
             h="100%"
             bg="yellow"
           >
+            <Box>Icon</Box>
             <SidenavItems navItems={navItems} mode="semi" showLabels={isSideBarOpen} />
           </Box>
           <Box
