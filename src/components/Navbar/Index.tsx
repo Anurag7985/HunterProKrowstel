@@ -1,12 +1,22 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react'
+import { Box, Flex, Button, useDisclosure } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{ onToggleSidebar: () => void }> = ({ onToggleSidebar }) => {
   return (
-    <Box w='100vw' h='100vh'>
-
-    </Box>
-
+    <Flex
+      as="header"
+      bg="teal.500"
+      color="white"
+      padding={4}
+      align="center"
+      justify="space-between"
+    >
+      <Button onClick={onToggleSidebar} aria-label="Toggle sidebar">
+        <HamburgerIcon />
+      </Button>
+      <Box>Navbar Content</Box>
+    </Flex>
   );
 };
 
